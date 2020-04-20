@@ -1,43 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Grupo</title>
-
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-	<style>
-	#div1 {background-color: #666;}
-	#div2 {border: 2px solid white}
-	#div3 {background-color: #a2293a;}
-	#div4 {background-color: #a0a0a0;}
+<head>
 	
-	</style>
-
+	{% extends "base_header.html"%}
+	
   </head>
+{% load static %}
   <body>
+	{% block content %}
 
-    <div class="container-fluid">
-	<div id = "div3" class="row"><p>
-		<div id = "div3" class="col-md-12">
-							
-		</div>
-	</div>
-		<div class="row">
-		<div id = "div3" class="col-md-1">
-			<img src="img/logo_puc.svg" width = "70"align = "left"/>
-		</div>
-		
-		<div id = "div1" class="col-md-11">
+    	<div id = "div1" class="col-md-11">
 
-		<img src = "img/formacao-grupos.png " align = "right"/>
+		<img src = "{% static "img/formacao-grupos.png"%}" alt = formacao-grupos align = "right"/>
 			<br>
 			<p>
 			<h5 class="text-right">
@@ -61,13 +33,13 @@
 			</font>
 			</p>
 			<p>
-				<center> <a class="btn" href="#">Link PDF »</a>
+				<center> <a class="btn" href="http://www.lami.pucpr.br/ajudaEstudante/recursos/InscricaoGrupos.pdf">Link PDF »</a>
 			</p>
 		</div>
 	</div>
 	<div class="row">
 		<div id = "div4"class="col-md-12">
-			<center> <img src="img/video1.jpg "width = "500""> <p> 
+			<center> <img src="{% static "img/video1.jpg" %}" alt = vide1 width = "500""> <p> 
 			<br>
 			</br>
 	
@@ -102,5 +74,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
 	</div>
+	{% endblock%}
   </body>
 </html>

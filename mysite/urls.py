@@ -22,6 +22,19 @@ urlpatterns = [
     path('login/', views.login_user),
     path('login/submit', views.submit_login),
     path('logout/', views.logout_user),
-    path('/', views.post_list)
+    path('/', views.post_list),
+    path('index2', views.index2),
+    path('index3', views.index3),
+    path('index4', views.index4),
+    path('index5', views.index5),
+    path('index6', views.index6),
+    path('index7', views.index7),
+    path('index8', views.index8),
+    path('index9', views.index9),
+    path('index10', views.index10),
+    path('index11', views.index11),
+    path('index12', views.index12),
+    path('post_list', views.post_list),
+    path('base_header', views.header),
 
 ]

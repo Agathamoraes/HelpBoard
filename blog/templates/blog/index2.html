@@ -1,47 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Menu Help Board</title>
-
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+<head>
 	
-	<style>
-	#div1 {background-color: #666;}
-	#div2 {border: 2px solid white}
-	#div3 {background-color: #a2293a;}
-	#div4 {background-color: #a0a0a0;}
-	#div5 {background-color: #a2293a; border: 2px solid gray}
-	
-	</style>
+	{% extends "base_header.html"%}
 	
   </head>
+{% load static %}
   <body>
-
+	{% block content %}
     <div class="container-fluid">
-	<div class="row">
-		<div id = "div3" class="col-md-12"> <p>
-		</div>
-	</div>
-	<div class="row">
-		<div id= "div3"class="col-md-1">
-			<img src="img/logo_puc.svg" width = "70"align = "left"/> 
-		</div> <p>
+		<div class="row">
+			<div id= "div3"class="col-md-1">
+			
+			</div> <p>
 		<div id = "div1" class="col-md-11">
 			<br>
 			</br>
-			<h5 class="text-right">
+			<h2 class="text-right">
 				<font color = "white">
 					Help Board                                                                                                                                                                                    
 				</font>
-			</h5>
+			</h2>
 		</div>
 	</div>
 	<div id = "div4"class="row"> <br>
@@ -52,42 +30,42 @@
 		</div>
 	</div>
 	<div class="row">
-		<div id = "div5"class="col-md-4"> <center>
-			<a href = "file:///C:/Users/agath/OneDrive/Documentos/Aula/Experi%C3%AAncia%20Criativa/Prototipo/layoutit2/src/index7.html">	
-			<img src="img/notaA.png "/>
+		<div id = "div3"class="col-md-4"> <center>
+			<a href = "index7">	
+			<img src="{% static "img/notaA.png" %}" alt = "notaA"/>
 						
 			<font color = "white"> <h6> Notas </h6> </font> <br>
 			</a>	
 		</div>
-		<div id = "div5" class="col-md-4"> <center>
-			<a href = "file:///C:/Users/agath/OneDrive/Documentos/Aula/Experi%C3%AAncia%20Criativa/Prototipo/layoutit2/src/index10.html">
-			<img src="img/testes.png ">
+		<div id = "div3" class="col-md-4"> <center>
+			<a href = "index10">
+			<img src="{% static "img/testes.png" %}" alt = "testes"/>
 			<font color = "white"> <h6> Testes </h6> </font> <br>
 			</a>
 		</div>
-		<div id = "div5"class="col-md-4"> <center>
-			<a href = "file:///C:/Users/agath/OneDrive/Documentos/Aula/Experi%C3%AAncia%20Criativa/Prototipo/layoutit2/src/index8.html">
-			<img src="img/BbStudent.png ">
+		<div id = "div3"class="col-md-4"> <center>
+			<a href = "index8">
+			<img src="{% static "img/BbStudent.png" %}" alt = "BbStudent"/>
 			<font color = "white"> <h6> Participação em Forúm </h6> </font> <br>
 			</a>
 		</div>
 	</div>
 	<div class="row">
-		<div id = "div5" class="col-md-4"> <center>
-			<a href = "file:///C:/Users/agath/OneDrive/Documentos/Aula/Experi%C3%AAncia%20Criativa/Prototipo/layoutit2/src/index9.html">
-			<img src="img/entregaExerc.png ">
+		<div id = "div3" class="col-md-4"> <center>
+			<a href = "index9">
+			<img src="{% static "img/entregaExerc.png" %}" alt = "entregaExerc"/>
 			<font color = "white"> <h6> Entrega Exercício </h6> </font> <br>
 			</a>
 		</div>
-		<div id = "div5" class="col-md-4"> <center>
-			<a href = "file:///C:/Users/agath/OneDrive/Documentos/Aula/Experi%C3%AAncia%20Criativa/Prototipo/layoutit2/src/index12.html">
-			<img src="img/formacao-grupos.png ">
+		<div id = "div3" class="col-md-4"> <center>
+			<a href = "index12">
+			<img src="{% static "img/formacao-grupos.png" %}" alt = "formacao-grupos"/>
 			<font color = "white"> <h6> Inscrição em Grupos </h6> </font> <br>
 			</a>
 		</div>
-		<div id = "div5" class="col-md-4"> <center>
-			<a href = "file:///C:/Users/agath/OneDrive/Documentos/Aula/Experi%C3%AAncia%20Criativa/Prototipo/layoutit2/src/index11.html">
-			<img src="img/forum.png ">
+		<div id = "div3" class="col-md-4"> <center>
+			<a href = "index11">
+			<img src="{% static "img/forum.png" %}" alt = "forum"/>
 			<font color = "white"> <h6> Ensalamento </h6> </font> <br>
 			</a>	
 		</div>
@@ -106,5 +84,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-  </body>
+	{% endblock%}
+</body>
 </html>
