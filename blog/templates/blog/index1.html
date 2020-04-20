@@ -1,6 +1,7 @@
+{% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,9 +38,9 @@
 			
 		</div>
 	</div>
-	<div class="row">
+	<div id = "div1" class="row">
 		<div id = "div3" class="col-md-1">
-			<img src="img/logo_puc.svg" width = "70"align = "left"/>
+			<img src="{% static "img/logo_puc.svg" %}" alt = "logo_puc" width = "70"align = "left"/>
 		</div>
 				<div id = "div1" class="col-md-6">
 			
@@ -271,8 +272,8 @@
 	</div>
 
 	<div class="fixed-action-btn click-to-toggle">
-		<a href = "file:///C:/Users/agath/OneDrive/Documentos/Aula/Experi%C3%AAncia%20Criativa/Prototipo/layoutit2/src/index2.html">
-		<img src = "img/helpBut.png" width = "70 /> 
+		<a href = "index2.html">
+		<img src = "{% static "img/helpBut.png" %}" alt = "helpBut" width = "70 /> 
         </a>
           <i class="add"></i>
         </a>         
