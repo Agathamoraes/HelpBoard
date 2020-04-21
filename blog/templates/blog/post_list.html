@@ -1,47 +1,13 @@
-{% load static %}
 
-<!DOCTYPE html>
-<html lang="pt">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Tela Inicial</title>
-
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<head>
 	
-	<style>
-	#div1 {background-color: #666;}
-	#div2 {border: 2px solid #DCDCDC;}
-	#div3 {background-color: #a2293a;}
-	#div4 {background-color: #a0a0a0;}
-	#div5 {background-color: #DCDCDC;}
-	#div6 {background-color: #A9A9A9;}
-	</style>
+	{% extends "base_header.html"%}
 	
   </head>
+{% load static %}
   <body>
-
-	
-  
-	<div class="container-fluid">
-	<div id = "div3"class="row"> <p>
-		<div class="col-md-12">
-			
-		</div>
-	</div>
-	<div id = "div1" class="row">
-		<div id = "div3" class="col-md-1">
-			<img src="{% static "img/logo_puc.svg" %}" alt = "logo_puc" width = "70"align = "left"/>
-		</div>
+	{% block content %}
+ 
 				<div id = "div1" class="col-md-6">
 			
 		</div>
@@ -271,22 +237,7 @@
 		</div>
 	</div>
 
-	<div class="fixed-action-btn click-to-toggle">
-		<a href = "index2">
-		<img src = "{% static "img/helpBut.png" %}" alt = "helpBut" width = "70 /> 
-        </a>
-          <i class="add"></i>
-        </a>         
-        <ul>
-            <li><a class="btn-floating btn-danger"><i class="ti-user"></i></a></li>
-            <li><a class="btn-floating btn-warning"><i class="ti-settings"></i></a></li>
-            <li><a class="btn-floating btn-success"><i class="ti-zoom-in"></i></a></li>
-            <li><a class="btn-floating btn-info"><i class="ti-email"></i></a></li>
-        </ul>
-    </div>
-
-   <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+	{% include "base_footer.html" %}
+	{% endblock%}
   </body>
 </html>

@@ -46,6 +46,11 @@ def index12 (request):
 def header (request):
     return render (request, 'base_header.html')
 
+def footer (request):
+    return render (request, 'base_footer.html')
+def footer_avalia (request):
+    return render (request, 'base_footer_avalia.html')
+
 
 def logout_user (request):
     logout (request)

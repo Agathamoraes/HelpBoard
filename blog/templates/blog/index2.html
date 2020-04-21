@@ -5,45 +5,47 @@
 	
   </head>
 {% load static %}
-  <body>
+
+<body>
 	{% block content %}
     <div class="container-fluid">
 		<div class="row">
-			<div id= "div3"class="col-md-1">
 			
-			</div> <p>
 		<div id = "div1" class="col-md-11">
-			<br>
-			</br>
-			<h2 class="text-right">
+
+			<h3 class="text-right">
 				<font color = "white">
 					Help Board                                                                                                                                                                                    
 				</font>
-			</h2>
+			</h3>
 		</div>
 	</div>
 	<div id = "div4"class="row"> <br>
 		
 	</div>
-	<div id = "div4"class="row">  <br><p> <br> <br> <p>
-		<div class="col-md-12">
+	<div id = "div4"class="row" >  <br><p> <br> <br> <p>
+		<div class="col-md-12" >
 		</div>
 	</div>
 	<div class="row">
-		<div id = "div3"class="col-md-4"> <center>
-			<a href = "index7">	
+		
+		<div class="col-md-1" style="margin-left:0.2%; margin-right:0.2%; margin-top:0.5%" >  <center>
+		</div>
+
+		<div id = "div3"class="col-md-3" style="margin-left:0.2%; margin-right:0.2%; margin-top:0.5%" >  <center>
+			<a href = "index7" >	
 			<img src="{% static "img/notaA.png" %}" alt = "notaA"/>
 						
 			<font color = "white"> <h6> Notas </h6> </font> <br>
 			</a>	
 		</div>
-		<div id = "div3" class="col-md-4"> <center>
+		<div id = "div3" class="col-md-3" style="margin-left:0.2%; margin-right:0.2%; margin-top:0.5%"> <center>
 			<a href = "index10">
 			<img src="{% static "img/testes.png" %}" alt = "testes"/>
 			<font color = "white"> <h6> Testes </h6> </font> <br>
 			</a>
 		</div>
-		<div id = "div3"class="col-md-4"> <center>
+		<div id = "div3"class="col-md-3" style="margin-left:0.2%; margin-right:0.2%; margin-top:0.5%"> <center>
 			<a href = "index8">
 			<img src="{% static "img/BbStudent.png" %}" alt = "BbStudent"/>
 			<font color = "white"> <h6> Participação em Forúm </h6> </font> <br>
@@ -51,19 +53,23 @@
 		</div>
 	</div>
 	<div class="row">
-		<div id = "div3" class="col-md-4"> <center>
+
+		<div class="col-md-1" style="margin-left:0.2%; margin-right:0.2%; margin-top:0.5%" >  <center>
+		</div>
+
+		<div id = "div3" class="col-md-3" style="margin-left:0.2%; margin-right:0.2%; margin-top:0.5%" > <center>
 			<a href = "index9">
 			<img src="{% static "img/entregaExerc.png" %}" alt = "entregaExerc"/>
 			<font color = "white"> <h6> Entrega Exercício </h6> </font> <br>
 			</a>
 		</div>
-		<div id = "div3" class="col-md-4"> <center>
+		<div id = "div3" class="col-md-3" style="margin-left:0.2%; margin-right:0.2%; margin-top:0.5%"> <center>
 			<a href = "index12">
 			<img src="{% static "img/formacao-grupos.png" %}" alt = "formacao-grupos"/>
 			<font color = "white"> <h6> Inscrição em Grupos </h6> </font> <br>
 			</a>
 		</div>
-		<div id = "div3" class="col-md-4"> <center>
+		<div id = "div3" class="col-md-3" style="margin-left:0.2%; margin-right:0.2%; margin-top:0.5%"> <center>
 			<a href = "index11">
 			<img src="{% static "img/forum.png" %}" alt = "forum"/>
 			<font color = "white"> <h6> Ensalamento </h6> </font> <br>
@@ -85,5 +91,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
 	{% endblock%}
+
+	
+
 </body>
 </html>

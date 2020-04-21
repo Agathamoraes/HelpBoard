@@ -36,5 +36,7 @@ urlpatterns = [
     path('index12', views.index12),
     path('post_list', views.post_list),
     path('base_header', views.header),
+    path('base_footer', views.footer),
+    path('base_footer_avalia', views.footer_avalia),
 
 ]
