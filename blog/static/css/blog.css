@@ -139,3 +139,26 @@ h1, h2, h3, h4 {
 	  margin: 0 15px;
 	 
   }
+
+  fas.fa-search {
+    position: absolute;
+    top: 12px;
+    right: 26px;
+    cursor: pointer;
+  }
+
+  .search-div {
+    padding: 50;
+    margin-top: 50px;
+    margin-bottom: 50px
+    display: inline-block;
+  }
+
+  .estrelas input[type=radio]{
+    display: none;
+  }.estrelas label i.fa:before{
+    content: '\f005';
+    color: #FC0;
+  }.estrelas  input[type=radio]:checked  ~ label i.fa:before{
+    color: #CCC;
+  }

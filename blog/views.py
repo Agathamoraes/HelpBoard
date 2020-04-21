@@ -20,6 +20,11 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {})
 
 def index2 (request):
+    search = request.GET.get('search')
+    if search:
+        post = post.objects.filter (title_icontains = search)
+    else:
+        posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render (request, 'index2.html')
 
 def index3 (request):
