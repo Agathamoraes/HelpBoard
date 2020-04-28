@@ -140,19 +140,21 @@ h1, h2, h3, h4 {
 	 
   }
 
-  fas.fa-search {
+
+  .fas.fa-search {
     position: absolute;
     top: 12px;
     right: 26px;
     cursor: pointer;
-  }
+}
 
-  .search-div {
-    padding: 50;
-    margin-top: 50px;
-    margin-bottom: 50px
+.search-div {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 50px;
     display: inline-block;
-  }
+}
+
 
   .estrelas input[type=radio]{
     display: none;
@@ -162,3 +164,23 @@ h1, h2, h3, h4 {
   }.estrelas  input[type=radio]:checked  ~ label i.fa:before{
     color: #CCC;
   }
+
+
+  .post {
+    margin-bottom: 70px;
+}
+
+  .post h2 a, .post h2 a:visited {
+    color: #000000;
+}
+
+.filter-div {
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+#filter {
+  display: inline-block;
+  width: 200px;
+  margin-left: 10px;
+}

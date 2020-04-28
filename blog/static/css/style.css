@@ -105,3 +105,24 @@
     color: #ccc;
        
   }
+
+  .searchTab {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+  }
+
+  
+element.style {
+}
+.pinning-header .secondary-navigation:not(.menu-navigation) .icon-search {
+    font-size: 1.3em;
+    margin-right: 0;
+}
+.pinning-header .secondary-navigation .icon-search {
+    vertical-align: middle;
+}
+.searchTab .icon-search {
+    font-weight: bold;
+}

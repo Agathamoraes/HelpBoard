@@ -1,0 +1,40 @@
+<head>
+	
+	{% extends "base_header.html"%}
+	
+</head>
+{% load static %}
+<body>
+{% block content %}  
+
+{% for post in posts %}
+   <div id = "div1">
+       <div class = "container"style="margin-right:0.5%">
+            <img src="{{post.photo.url}}" align = "right"  class='img-fluid' />
+            <h2 class="text-right"><font color = "white">Help Board </font></h2>
+        </div>
+
+        <div id = "div4"> <br>
+            <center> <font color = "white">
+           <p></p> {{post.title}} <p></p>
+            {{post.text|safe}}
+            </center> </font>
+            <br>
+        </div>    
+        <div class="col-md-12"><br>
+            <center> <video controls src = "{{ post.video.url }}" width="426" height="240"> </center></video>
+        </div> <<p></p>>
+        {% endfor %}
+    
+
+
+    <div id = "div1">
+        <br><br>
+    </div>
+
+
+    {% include "base_footer_avalia.html" %}
+	{% include "base_footer.html" %}
+    {% endblock%}
+	
+</body>

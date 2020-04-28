@@ -6,6 +6,8 @@ from django.contrib.auth import  authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
+from .forms import PostForm
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -16,40 +18,24 @@ def post_detail(request, pk):
 
 @login_required(login_url='/login/')
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date') 
     return render(request, 'blog/post_list.html', {})
-
-def index2 (request):
-    search = request.GET.get('search')
-    if search:
-        post = post.objects.filter (title_icontains = search)
-    else:
-        posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render (request, 'index2.html')
-
-def index3 (request):
-    return render (request, 'index3.html')
-def index4 (request):
-    return render (request, 'index4.html')
-def index5 (request):
-    return render (request, 'index5.html')
-def index7 (request):
-    return render (request, 'index7.html')
-def index6 (request):
-    return render (request, 'index6.html')
-def index8 (request):
-    return render (request, 'index8.html')
-def index9 (request):
-    return render (request, 'index9.html')
-def index10 (request):
-    return render (request, 'index10.html')
-def index11 (request):
-    return render (request, 'index11.html')
-def index12 (request):
-    return render (request, 'index12.html')
 
 def header (request):
     return render (request, 'base_header.html')
+
+def detail (request,title):
+    posts = Post.objects.filter(title__icontains = title)
+    return render (request,'detail.html', {'posts':posts})
+
+def menu (request):
+    search = request.GET.get('search')
+
+    if search:
+        posts = Post.objects.filter(title__icontains = search)
+    else:
+        posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/menu.html', {'posts': posts})
+
 
 def footer (request):
     return render (request, 'base_footer.html')

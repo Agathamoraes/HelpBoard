@@ -1,0 +1,92 @@
+
+<head>
+	{% extends "base_header.html"%}
+	 {% block style%}
+	<style>
+		.photo{
+			text-align: center;
+		}
+
+
+	</style>
+	{% endblock %}
+
+	
+</head>
+{% load static %}
+
+<body>
+	{% block content %}
+
+    <div class="container-fluid">
+		<div class="row">
+			
+		<div id = "div1" class="col-md-11">
+
+			<h3 class="text-right">
+				<font color = "white">
+					Help Board                                                                                                                                                                                    
+				</font>
+			</h3>
+		</div>
+	</div>
+
+	<div id = "div4"class="row"> <br>
+	</div>
+	
+		
+
+	<div id = "div4" class="row">
+		<div class="col-9 search-div">
+		  <form method="GET" id="search-form" class="form-inline">
+			<input class="form-control" type="text" id="search" name="search" placeholder="Pesquise..." value="{{ request.GET.search }}">
+			<i class="fas fa-search" id="search-btn"></i>
+		  </form>
+		</div>
+	  </div>
+
+
+		<br>
+		<div class="col-md-12" >
+		</div>
+	</div>
+
+	
+    <div class="container">
+		<div class="row"> <p></p>
+			{% for post in posts %}
+			
+				<div id = div7 class="col-md-4">
+					<a href="../detail/{{ post.title }}">
+						<div class="photo">
+							<img src="{{post.photo.url}}"class='img-fluid'/>
+							<div class="photo">
+								<p><font color = "white"> <h6> {{ post.title }} </h6> </font> </p>
+							</div>
+						</div>
+					</a>
+					
+				</div>     
+		         
+			{% endfor %}
+		</div>
+	</div>  
+</div> 
+<div class="row">
+	<div id = "div1"class="col-md-12"> <p>
+	</div>
+</div> 
+<div class="row">
+	<div id = "div4"class="col-md-12"> <br><br><br><br>
+	</div>
+</div>
+	
+
+
+	{% endblock%}
+
+  </body>
+
+
+  {% for post in posts %}
+{% endfor %}
